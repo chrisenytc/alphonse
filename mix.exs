@@ -33,7 +33,7 @@ defmodule Alphonse.Mixfile do
   end
 
   defp package do
-    [ :maintainers: ["Christopher EnyTC"],
+    [ maintainers: ["Christopher EnyTC"],
       licenses: ["MIT"],
       links: %{"Github" => @repo} ]
   end
