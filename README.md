@@ -14,21 +14,57 @@ Add alphonse to the dependencies
 
 ## Documentation
 
-#### .awesome(name)
+#### .encrypt(source, key, iv, output)
 
-**Parameter**: `name`
+**Parameter**: `source`
 **Type**: `String`
-**Example**: `Livia`
+**Example**: `data.txt`
 
-The 'awesome' method is responsible for showing a name.
+**Parameter**: `key`
+**Type**: `String`
+**Example**: `testiekeyphraseforcipher`
+
+**Parameter**: `iv`
+**Type**: `String`
+**Example**: `testieivphraseforcipher`
+
+**Parameter**: `output`
+**Type**: `String`
+**Example**: `encrypted_data.txt`
+
+The 'encrypt' method is responsible for encrypt a file
 
 How to use this method
 
 ```elixir
-Alphonse.awesome "Livia" # "Hello Livia"
+{:ok, encrypted_data} = Alphonse.encrypt "data.txt", "testiekeyphraseforcipher", "testieivphraseforcipher", "encrypted_data.txt"
 ```
 
-## Change this template to create your own package
+#### .decrypt(encrypted_source, key, iv, output)
+
+**Parameter**: `encrypted_source`
+**Type**: `String`
+**Example**: `encrypted_data.txt`
+
+**Parameter**: `key`
+**Type**: `String`
+**Example**: `testiekeyphraseforcipher`
+
+**Parameter**: `iv`
+**Type**: `String`
+**Example**: `testieivphraseforcipher`
+
+**Parameter**: `output`
+**Type**: `String`
+**Example**: `decrypted_data.txt`
+
+The 'decrypt' method is responsible for decrypt a file
+
+How to use this method
+
+```elixir
+{:ok, decrypted_data} = Alphonse.decrypt "encrypted_data.txt", "testiekeyphraseforcipher", "testieivphraseforcipher", "decrypted_data.txt"
+```
 
 ### How to Build
 
