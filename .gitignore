@@ -1,0 +1,9 @@
+/_build
+/deps
+/test/fixtures/encrypted_test_data.txt
+/test/fixtures/decrypted_test_data.txt
+erl_crash.dump
+*.ez
+.DS_Store
+.swp
+.sw*
